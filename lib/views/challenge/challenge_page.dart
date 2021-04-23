@@ -13,10 +13,24 @@ class _ChallengePageState extends State<ChallengePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(80),
-        child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 20),
-          child: QuestionIndicator(),
+        preferredSize: Size.fromHeight(110),
+        child: SafeArea(
+          top: true,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              BackButton(),
+//! Caso queira colocar um button personalizado de voltar, essa seria a opção
+              // IconButton(
+              //   icon: Icon(Icons.close),
+              //   onPressed: () {
+              //     Navigator.pop(context);
+              //   },
+              // ),
+//! <------------------------------------------------------------------
+              QuestionIndicator(),
+            ],
+          ),
         ),
       ),
       body: QuizWidget(

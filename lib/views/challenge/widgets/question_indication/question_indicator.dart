@@ -6,33 +6,33 @@ class QuestionIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            height: 20,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Questão 04",
-                style: AppTextStyles.body,
-              ),
-              Text(
-                " de 10",
-                style: AppTextStyles.body,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 16,
-          ),
-          LinearProgressIndicatorWidget(
-            value: 0.3,
-          ),
-        ],
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Questão 04",
+                  style: AppTextStyles.body,
+                ),
+                Text(
+                  " de 10",
+                  style: AppTextStyles.body,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            LinearProgressIndicatorWidget(
+              value: 0.3,
+            ),
+          ],
+        ),
       ),
     );
   }
