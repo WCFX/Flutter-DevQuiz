@@ -1,7 +1,6 @@
-import 'package:flutter/foundation.dart' show kIsWeb;
-
 import 'package:dev_quiz/core/app_colors.dart';
 import 'package:dev_quiz/controllers/home_controller.dart';
+import 'package:dev_quiz/views/challenge/challenge_page.dart';
 import 'package:dev_quiz/views/home_page/home_state.dart';
 import 'package:dev_quiz/views/home_page/quiz_card/quiz_card_widget.dart';
 import 'package:dev_quiz/views/home_page/widgets/appbar/app_bar_widget.dart';
@@ -56,15 +55,21 @@ class _HomePageState extends State<HomePage> {
               ),
               Expanded(
                 child: GridView.count(
-                  crossAxisSpacing: 15,
-                  mainAxisSpacing: 15,
-                  crossAxisCount: kIsWeb ? 4 : 2,
+                  crossAxisSpacing: 14,
+                  mainAxisSpacing: 14,
+                  crossAxisCount: 2,
                   children: controller.quizzes!
                       .map((e) => QuizCardWidget(
                             title: e.title,
                             percent: e.questionAnswered / e.questions.length,
                             completed:
                                 "${e.questionAnswered} de ${e.questions.length}",
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ChallengePage()));
+                            },
                           ))
                       .toList(),
                 ),
