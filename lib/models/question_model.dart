@@ -1,10 +1,12 @@
 import 'dart:convert';
 
-import 'package:dev_quiz/models/awnser_model.dart';
+import 'package:dev_quiz/models/answer_model.dart';
+
+import 'answer_model.dart';
 
 class QuestionModel {
   final String title;
-  final List<AwnserModel> answers;
+  final List<AnswerModel> answers;
 
   QuestionModel({required this.title, required this.answers})
       : assert(answers.length == 4);
@@ -19,8 +21,8 @@ class QuestionModel {
   factory QuestionModel.fromMap(Map<String, dynamic> map) {
     return QuestionModel(
       title: map['title'],
-      answers: List<AwnserModel>.from(
-          map['answers'].map((x) => AwnserModel.fromMap(x))),
+      answers: List<AnswerModel>.from(
+          map['answers'].map((x) => AnswerModel.fromMap(x))),
     );
   }
 

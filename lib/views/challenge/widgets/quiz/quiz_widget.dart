@@ -1,5 +1,5 @@
 import 'package:dev_quiz/core/app_text_styles.dart';
-import 'package:dev_quiz/views/challenge/awnser/awnser_widgwt.dart';
+import 'package:dev_quiz/views/challenge/answer/answer_widgwt.dart';
 import 'package:flutter/material.dart';
 
 class QuizWidget extends StatelessWidget {
@@ -24,22 +24,22 @@ class QuizWidget extends StatelessWidget {
           SizedBox(
             height: 24,
           ),
-          AwnserWidget(
+          AnswerWidget(
             title: "Kit de desenvolvimento de  intefarce de usuários",
             isRight: false,
             isSelected: false,
           ),
-          AwnserWidget(
+          AnswerWidget(
             title: "Possibilita a criação de aplicativos copilados",
             isSelected: true,
             isRight: true,
           ),
-          AwnserWidget(
+          AnswerWidget(
             title: "Acho que é uma marca de café do Himalaia",
             isSelected: true,
             isRight: false,
           ),
-          AwnserWidget(
+          AnswerWidget(
             title: "Possibilita a criação desktops que são muito incríveis",
             isSelected: false,
             isRight: false,

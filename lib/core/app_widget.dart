@@ -1,4 +1,4 @@
-import 'package:dev_quiz/views/home_page/home_page.dart';
+import 'package:dev_quiz/views/challenge/challenge_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -8,7 +8,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "DevQuiz",
       // home: ChallengePage(),
-      home: HomePage(),
+      home: ChallengePage(),
       // home: SplashPage(),
     );
   }
