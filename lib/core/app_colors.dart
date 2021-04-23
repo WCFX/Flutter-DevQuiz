@@ -13,7 +13,7 @@ class AppColors {
   //Greens
   static final Color lightGreen = Color(0xFFE1F5EC);
   static final Color green = Color(0xFFB8DBCB);
-  static final Color darkGreen = Color(0xFF04D361);
+  static final Color darkGreen = Color(0xFF428c50);
 
   //Reds
   static final Color lightRed = Color(0xFFF5E9EC);
